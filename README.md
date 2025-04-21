@@ -1,1 +1,18 @@
 # Investo
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/HarshGangurde/Endesem.git
+git branch -M main
+git push -u origin main
+
+
+cd C:\Users\YourName\MyProject
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+deactivate
+
+
