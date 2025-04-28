@@ -44,3 +44,35 @@ kubectl get pods --all-namespaces
 (kubeadm join --discovery-token abcdef.1234567890abcdef --discovery token-ca-cert-hash sha256:1234..cdef 1.2.3.4:6443)
 kubectl get nodes
 
+
+Java 8 Package
+tar -xvf jdk-8u101-linux-i586.tar.gz
+wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+tar -xvf hadoop-2.7.3.tar.gz
+vi .bashrc
+source .bashrc
+java -version
+hadoop version
+cd hadoop-2.7.3/etc/hadoop/
+ls
+vi core-site.xml
+vi hdfs-site.xml
+vi mapred-site.xml
+vi yarn-site.xml
+vi hadoop–env.sh
+cd
+cd hadoop-2.7.3
+bin/hadoop namenode -format
+cd hadoop-2.7.3/sbin
+./start-all.sh
+./hadoop-daemon.sh start namenode
+./hadoop-daemon.sh start datanode
+./yarn-daemon.sh start resourcemanager
+./yarn-daemon.sh start nodemanager
+./mr-jobhistory-daemon.sh start historyserver
+jps
+open the Mozilla localhost:50070/dfshealth.html check the NameNode interface.
+
+
+
+
